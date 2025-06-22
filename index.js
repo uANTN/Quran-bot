@@ -11,9 +11,9 @@ const client = new Client({ intents: [
   GatewayIntentBits.GuildVoiceStates
 ] });
 
-const TOKEN = 'MTM4NTc2MDcxMDQ0MDY1MjkxMw.GU8QN9.QGLTHABj0G5F5lkGBhcTYjOQDXNMcCuyD-4sUg';
-const VOICE_CHANNEL_ID = '1148955669278507038';
-const STREAM_URL = 'https://www.youtube.com/watch?v=2Gub8-cSH9c';
+const TOKEN = process.env.TOKEN;
+const VOICE_CHANNEL_ID = process.env.CHANNEL_ID;
+const STREAM_URL = process.env.STREAM_URL;
 
 client.once('ready', () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
